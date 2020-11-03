@@ -58,8 +58,8 @@
        - "{{ whoami.stdout }}"
        - jenkins
    - name: Install docker-compose
-       remote_user: ubuntu
-       get_url:
-         url: https://github.com/docker/compose/releases/download/1.27.4/docker-compose-Linux-x86_64
-         dest: /usr/local/bin/docker-compose
-         mode: 'u+x,g+x'
+     remote_user: ubuntu
+     get_url:
+       url: https://github.com/docker/compose/releases/download/1.27.4/docker-compose-Linux-x86_64
+       dest: /usr/local/bin/docker-compose
+       mode: 'u+x,g+x'
