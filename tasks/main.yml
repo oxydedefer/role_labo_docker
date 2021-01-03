@@ -6,6 +6,10 @@
        state: latest
        update_cache: yes
        force_apt_get: yes
+     register: result
+     retries: 3
+     delay: 10
+     until: result is not failed
 
    - name: Install required system packages
      apt:
